@@ -1,11 +1,7 @@
 import React from 'react';
 
-import Nav from './Nav';
-
 const Member = () => 
-  <div>
-    <Nav />
-    
+  <div>    
     <ul>
       <li>Sk. Imtiaz Ahmed @Sk Imtiaz Ahmed  https://www.facebook.com/excalliburbd</li>
 
