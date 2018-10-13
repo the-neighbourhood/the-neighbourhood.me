@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import kanpai from './kanpai.png';
 
 const IntroContainer = styled.div`
-  padding: 1em 4em;
+  /* padding: 1em 4em; */
   text-align: center;
 `;
 
@@ -13,15 +13,24 @@ const CenteredContainer = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
+  background-image: url(${kanpai});
+  height: calc(100vh - 5rem);
+  background-repeat: no-repeat;
+  background-color: #282828;
+  width: 100%;
+  background-position: 50% 60%;
 `;
 
 const Header = styled.h1`
-  font-size: 4rem;
+  font-size: 5rem;
+  color: #fff;
+  margin-top: 4rem;
 `;
 
-const Logo = styled.img`
-  width: 40vw;
-`;
+// const Logo = styled.img`
+//   width: 100%;
+//   height: 80vh;
+// `;
 
 const ActionButton = styled.button`
   font-size: 1.5rem;
@@ -49,7 +58,7 @@ const Intro = () =>
 
     <CenteredContainer>
       <Header>The Neighbourhood</Header>
-      <Logo src={kanpai} alt="logo" />
+      {/* <Logo src={kanpai} alt="logo" /> */}
     </CenteredContainer>
 
     <p>We are a group of individuals who have embarked on a journey to master the cutting edge of software engineering</p>

@@ -9,6 +9,7 @@ const NavContainer = styled.div`
   padding: 1em 2em;
   justify-content: flex-end;
   align-items: center;
+  height: 5rem;
 `;
 
 const WhiteLink = styled(Link)`
@@ -16,6 +17,7 @@ const WhiteLink = styled(Link)`
   padding: 0 1em;
   text-decoration: none;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 
   &:hover {
     color: #f1c40f;
@@ -34,6 +36,7 @@ const NavButton = styled.button`
   margin-right: 1rem;
   border-radius: .2rem;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
   transition: all .3s;
 
   &:hover {
