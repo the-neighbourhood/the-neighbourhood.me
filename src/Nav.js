@@ -25,7 +25,7 @@ const WhiteLink = styled(Link)`
 
 `;
 
-const NavButton = styled.button`
+const NavButton = styled(WhiteLink)`
   color: white;
   padding: .3rem 1rem;
   text-decoration: none;
