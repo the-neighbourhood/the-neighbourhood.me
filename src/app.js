@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ApolloProvider } from "react-apollo";
 
-import IntorPage from './Intro';
-import Members from './Members';
-import Nav from './Nav';
-import Footer from './Footer'
+import IntorPage from './intro';
+import Members from './members';
+import Nav from './nav';
+import Footer from './footer'
 
 import client from './client';
 
