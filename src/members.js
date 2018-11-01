@@ -2,17 +2,19 @@ import React from 'react';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 
-const Member = () => <div>
+const GET_MEMBERS = gql`
+  query Members {
+    members {
+      id,
+      name
+    }
+  }
+`;
+
+const Members = () => 
   <ul>
     <Query
-      query={gql`
-        {
-          members {
-            id,
-            name
-          }
-        }
-      `}
+      query={GET_MEMBERS}
     >
       {({ loading, error, data }) => {
         if (loading) return <p>Loading...</p>;
@@ -24,6 +26,5 @@ const Member = () => <div>
       }}
     </Query>
   </ul>
-</div>
 
-export default Member;
+export default Members;

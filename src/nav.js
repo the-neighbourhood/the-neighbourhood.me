@@ -7,7 +7,7 @@ const NavContainer = styled.div`
   background: black;
   color: white;
   padding: 1em 2em;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 5rem;
 `;
@@ -25,7 +25,7 @@ const WhiteLink = styled(Link)`
 
 `;
 
-const NavButton = styled(WhiteLink)`
+const ExternalLink = styled.a`
   color: white;
   padding: .3rem 1rem;
   text-decoration: none;
@@ -52,10 +52,13 @@ const NavButton = styled(WhiteLink)`
 
 const Nav = () =>
   <NavContainer>
-    <WhiteLink to="/">The Neighborhood</WhiteLink>
-    <WhiteLink to="/members">Members</WhiteLink>
-    <NavButton to="#">Facebook</NavButton>
-    <NavButton to="#">Discord</NavButton>
+    <div>
+      <WhiteLink to="/">The Neighborhood</WhiteLink>
+    </div>
+    <div>
+      <WhiteLink to="/" onClick={ e => window.scrollTo(0, 1000)}>about</WhiteLink>
+      <ExternalLink href="https://goo.gl/forms/7s9jjFTki3vELnU52" >Join Us</ExternalLink>
+    </div>
   </NavContainer>
 
 export default Nav;

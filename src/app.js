@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ApolloProvider } from "react-apollo";
 
+import Layout from './layout';
 import IntorPage from './intro';
 import Members from './members';
-import Nav from './nav';
-import Footer from './footer'
+import Projects from './projects';
 
 import client from './client';
 
@@ -14,12 +14,11 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <Router>
-          <div className="App">
-            <Nav />
+          <Layout>
             <Route exact path="/" component={IntorPage} />
             <Route exact path="/members" component={Members} />
-            <Footer/>
-          </div>
+            <Route exact path="/projects" component={Projects} />
+          </Layout>
         </Router>
       </ApolloProvider>
     );
