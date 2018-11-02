@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import media from './media';
 import groupLogo from './group_logo.png';
 
 const IntroContainer = styled.div`
@@ -20,14 +21,22 @@ const HeroContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 5rem;
+  font-size: 2rem;
   color: #fff;
-  margin-top: 4rem;
+  margin-top: 1rem;
+
+  ${media.tablet`
+    font-size: 4rem;
+  `}
 `;
 
 const SubTitle = styled.p`
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1em 0;
+
+  ${media.tablet`
+    font-size: 2rem;
+  `}
 `;
 
 const ActionButton = styled(Link)`
@@ -50,15 +59,20 @@ const HeroGroup = styled.div`
   justify-content: center;
 `;
 
-const HeroLogo = styled.img``;
+const HeroLogo = styled.img`
+  max-width: 100vw;
+  margin: 1.5em 0;
+`;
 
 const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 3em;
   min-height: 100vh;
+  max-width: 1000px;
   text-align: left;
+  padding: 3em;
+  margin: 0 auto;
 
   h3, h4 {
     padding: 2em 0;
