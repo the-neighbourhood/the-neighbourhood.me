@@ -54,6 +54,12 @@ const ExternalLink = styled.a`
 
 const MobileMenuIcon = styled.a`
   font-size: 2rem;
+
+  &:hover {
+    color: #f1c40f;
+    cursor: pointer;
+  }
+
   ${media.tablet`
     display: none;
   `}
@@ -65,7 +71,12 @@ const RightMenu = styled.div`
   }
 
   ${media.tablet`
-    display: block; 
+    display: flex;
+    align-items: center;
+
+    & a:not(.mobile-visible) {
+      display: block;
+    }
   `}
 `;
 
@@ -99,7 +110,9 @@ class Nav extends Component {
         {
           MenuElements
         }
-        <MobileMenuIcon className="mobile-visible" onClick={this.toggleNav}>&#9776;</MobileMenuIcon>
+        <MobileMenuIcon className="mobile-visible" onClick={this.toggleNav}>
+          { this.state.toggle ? 'x' : <React.Fragment>&#9776;</React.Fragment> }
+        </MobileMenuIcon>
       </RightMenu>
       <MobileMenu show={this.state.toggle}>
         {
