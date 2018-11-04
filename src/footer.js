@@ -15,8 +15,6 @@ const Copyright = styled.p`
   font-family: 'Montserrat', sans-serif;
 `;
 
-
-
 const Footer = () =>
   <FooterContainer>
     <Copyright>All rights reserved to &copy;The Neighbourhood</Copyright>
