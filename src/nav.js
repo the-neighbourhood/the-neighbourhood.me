@@ -20,6 +20,7 @@ const WhiteLink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
+  margin-right: 2em;
 
   &:hover {
     color: #f1c40f;
@@ -88,7 +89,8 @@ const MobileMenu = styled.div`
 `;
 
 const MenuElements = [
-  <WhiteLink to="/" onClick={ e => window.scrollTo(0, 1000)}>about</WhiteLink>,
+  <WhiteLink to="/" onClick={ e => window.scrollTo(0, 1000)}>About</WhiteLink>,
+  <WhiteLink to="/" onClick={ e => window.scrollTo(0, 1950)}>Contact Us</WhiteLink>,
   <ExternalLink href="https://goo.gl/forms/7s9jjFTki3vELnU52" >Join Us</ExternalLink>
 ];
 

@@ -7,6 +7,7 @@ import Footer from './footer';
 const LayoutContainer = styled.div`
   background-color: #282828;
   color: white;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 const ChildrenWrapper = styled.div`
