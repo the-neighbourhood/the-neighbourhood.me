@@ -7,4 +7,4 @@ const client = new ApolloClient({
   uri: `https://api-apeast.graphcms.com/v1/cjn4i2roe32qr01fui66yrzhk/master`
 })
 
-export default client
+export default client;

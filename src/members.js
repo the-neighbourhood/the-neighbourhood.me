@@ -1,6 +1,6 @@
 import React from 'react';
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import { gql } from 'apollo-boost';
+import { useQuery } from '@apollo/react-hooks';
 
 const GET_MEMBERS = gql`
   query Members {
@@ -11,20 +11,17 @@ const GET_MEMBERS = gql`
   }
 `;
 
-const Members = () => 
-  <ul>
-    <Query
-      query={GET_MEMBERS}
-    >
-      {({ loading, error, data }) => {
-        if (loading) return <p>Loading...</p>;
-        if (error) return <p>Error :(</p>;
+const Members = () => {
+  const { loading, error, data } = useQuery(GET_MEMBERS);
 
-        return data.members.map(({ id, name }) => (
-          <li key={id}>{name}</li>
-        ));
-      }}
-    </Query>
-  </ul>
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+  
+  const { members } = data;
 
+  return (
+    members.map(({ name, id }) => <p key={id}>{name}</p> )
+  )
+}
+  
 export default Members;
